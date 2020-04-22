@@ -70,6 +70,7 @@ class ViewModel: ObservableObject, Identifiable, Codable {
                case listTitle
                case nameTitle
                case heightTitle
+               case weightTitle
                case notesTitle
                case imageUrlTitle
                case statusTitle
@@ -104,6 +105,9 @@ class ViewModel: ObservableObject, Identifiable, Codable {
         heightTitle = try container.decode(String.self,
                                                 forKey: .heightTitle)
         
+        weightTitle = try container.decode(String.self,
+        forKey: .weightTitle)
+        
         notesTitle = try container.decode(String.self,
                                                 forKey: .notesTitle)
         
@@ -132,6 +136,8 @@ class ViewModel: ObservableObject, Identifiable, Codable {
         try container.encode(nameTitle, forKey: .nameTitle)
         
         try container.encode(heightTitle, forKey: .heightTitle)
+        
+        try container.encode(weightTitle, forKey: .weightTitle)
         
         try container.encode(notesTitle, forKey: .notesTitle)
         

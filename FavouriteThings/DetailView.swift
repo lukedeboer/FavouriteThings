@@ -57,12 +57,13 @@ struct DetailView: View{
                     VStack (alignment: .trailing, spacing: 10){
                         
                         TextField("Enter Label", text: self.$viewModel.weightTitle)
+                        .frame(width:60, height:20)
                         
                         
                         
                         
                          TextField("Enter Label", text: self.$viewModel.heightTitle)
-                        
+                        .frame(width:60, height:20)
                         
                         
                         
@@ -101,17 +102,24 @@ struct DetailView: View{
                     Spacer()
                         .frame(height:30)
                       TextField("Enter Label", text: self.$viewModel.statusTitle)
-                                            TextField(ViewModel.threatFiller, text:  self.$model.status)
+                     .frame(width:50, height:20)
+                    
+                    
+                      
+                    TextField(ViewModel.threatFiller, text:  self.$model.status)
                         .font(Font.system(size:18))
                         .font(.body).multilineTextAlignment(.center)
+                        
                     
                     
                       TextField("Enter Label", text: self.$viewModel.notesTitle)
                         .padding(.top,20)
                         .font(.title)
+                    .frame(width:80, height:20)
+                    
                     TextField(ViewModel.notesFiller, text: self.$model.cursednotes)
                         .font(.body).multilineTextAlignment(.center)
-                        .padding(.bottom,20)
+                        .padding(.top,15)
                     
                     
                     
