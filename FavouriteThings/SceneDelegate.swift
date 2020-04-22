@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         
-        let contentView = ContentView(viewModel: ViewModel)
+        let contentView = ContentView(viewModel: viewModel)
 //
 //
 //            ///Creating Characters

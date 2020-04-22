@@ -6,8 +6,26 @@ import Foundation
  */
 class ViewModel: ObservableObject, Identifiable, Codable {
     
+    
+    ///Creating title for name
+    @Published var nameTitle = "Name"
+    ///Creating Title for Weight
+    @Published var weightTitle = "Weight"
+    
+    ///Creating Title for Height
+    @Published var heightTitle  = "Height"
+    ///Creating Title for Notes
+    @Published var notesTitle = "Notes"
+    ///Creating Title for Image URL
+    
+    @Published var imageUrlTitle = "Image URL"
+    
+    @Published var statusTitle = "Status"
+    
+    
+    
     ///Creating a listview title.
-    static var listTitle: String = "Cursed Contacts"
+   @Published var listTitle: String = "Cursed Contacts"
     /// The filller text when the user enters the name
     static var NameFiller: String = "Enter Name"
     /// The fillter text when the user enters the weight
@@ -37,29 +55,96 @@ class ViewModel: ObservableObject, Identifiable, Codable {
         people.remove(at: index)
         
         
-        
-        enum CodingKeys: String, CodingKey {
-            
-            
-            case Name
-            case weight
-            case height
-            case status
-            case image
-            
-            
-            
-        }
+       
         
         
         
         
         
     }
+    
+    
+           enum CodingKeys: String, CodingKey {
+               
+               case people
+               case listTitle
+               case nameTitle
+               case heightTitle
+               case notesTitle
+               case imageUrlTitle
+               case statusTitle
+               
+               
+               
+           }
     ///constructing the listTitle and people array.
-    init (listTitle: String, people: [Thing]){
-        self.people = people
+    init() {
+         people = [Thing]()
+     }
+     
+    
+    
+    
+    
+    
+    required init (from decoder: Decoder) throws {
+        
+        
+       let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        people = try
+            container.decode([Thing].self,
+                             forKey:.people)
+        listTitle = try container.decode(String.self,
+                                         forKey: .listTitle)
+        
+        nameTitle = try container.decode(String.self,
+                                                forKey: .nameTitle)
+        
+        heightTitle = try container.decode(String.self,
+                                                forKey: .heightTitle)
+        
+        notesTitle = try container.decode(String.self,
+                                                forKey: .notesTitle)
+        
+        imageUrlTitle = try container.decode(String.self,
+                                             forKey: .imageUrlTitle)
+        
+        statusTitle = try container.decode(String.self,
+        forKey: .statusTitle)
+        
+        
+        
+        
+        
         
     }
+    
+    func encode (to encoder: Encoder) throws {
+        
+        
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(people, forKey: .people)
+        
+        try container.encode(listTitle, forKey: .listTitle)
+        
+        try container.encode(nameTitle, forKey: .nameTitle)
+        
+        try container.encode(heightTitle, forKey: .heightTitle)
+        
+        try container.encode(notesTitle, forKey: .notesTitle)
+        
+        try container.encode(imageUrlTitle, forKey: .imageUrlTitle)
+        
+        try container.encode(statusTitle, forKey: .statusTitle)
+        
+        
+    }
+    
+    
+    
+    
+    
     
 }
