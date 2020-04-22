@@ -8,7 +8,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             MasterView(viewModel: viewModel)
-                .navigationBarTitle(Text(ViewModel.listTitle), displayMode: .inline)
+                .navigationBarTitle(Text(viewModel.listTitle), displayMode: .inline)
                 .navigationBarItems(
                     leading: EditButton(),
                     trailing: Button(

@@ -56,13 +56,15 @@ struct DetailView: View{
                     ///Has weight and Height and Threat Level Text on the left.
                     VStack (alignment: .trailing, spacing: 10){
                         
-                        Text("Weight:")
+                        TextField("Enter Label", text: self.$viewModel.weightTitle)
                         
                         
                         
                         
+                         TextField("Enter Label", text: self.$viewModel.heightTitle)
                         
-                        Text("Height:")
+                        
+                        
                         
                         
                         
@@ -98,14 +100,13 @@ struct DetailView: View{
                     
                     Spacer()
                         .frame(height:30)
-                    Text("Threat Level:")
-                        .fontWeight(.bold)
-                    TextField(ViewModel.threatFiller, text:  self.$model.status)
+                      TextField("Enter Label", text: self.$viewModel.statusTitle)
+                                            TextField(ViewModel.threatFiller, text:  self.$model.status)
                         .font(Font.system(size:18))
                         .font(.body).multilineTextAlignment(.center)
                     
                     
-                    Text("Notes:")
+                      TextField("Enter Label", text: self.$viewModel.notesTitle)
                         .padding(.top,20)
                         .font(.title)
                     TextField(ViewModel.notesFiller, text: self.$model.cursednotes)
