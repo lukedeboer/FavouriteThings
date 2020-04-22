@@ -24,7 +24,7 @@ import SwiftUI
                     ForEach(viewModel.people) { Thing in
                         NavigationLink(destination: DetailView(model: Thing, viewModel: self.viewModel)) {
                             Section {
-                                RowView(model: Thing)
+                                LineView(model: Thing)
                             }
                         }
                     }.onDelete { indices in

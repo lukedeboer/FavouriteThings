@@ -11,7 +11,7 @@ import Foundation
 
 import SwiftUI
 
-struct RowView: View {
+struct LineView: View {
     
     @ObservedObject var model: Thing
     
@@ -24,10 +24,18 @@ struct RowView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
-                .shadow(radius: 10).scaledToFit()
+                
             
             /// Characters Name
             Text(model.Name)
+            
+            //Threat Status
+            Divider()
+            
+            Text("Status:")
+            Text(model.status)
+            
+            
             
     
         }
