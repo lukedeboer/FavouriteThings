@@ -13,6 +13,8 @@ import SwiftUI
  
  */
 class Thing: ObservableObject, Identifiable, Codable {
+    
+    var imageUrl = ""
     ///creating variables and applying type.
     @Published  var Name: String
     /// Integer Weight of Cursed Contact
@@ -32,7 +34,7 @@ class Thing: ObservableObject, Identifiable, Codable {
     
     enum CodingKeys: String, CodingKey {
         
-        
+        case imageUrl
         case image
         case Name
         case weight
@@ -54,6 +56,7 @@ class Thing: ObservableObject, Identifiable, Codable {
         self.height = height
         self.status = status
         self.image = image
+       
         
     }
     
@@ -61,6 +64,12 @@ class Thing: ObservableObject, Identifiable, Codable {
     required init (from decoder: Decoder) throws {
           let container = try decoder.container(keyedBy:CodingKeys.self)
           
+        
+        
+        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+        
+        
+        
           image = try
             container.decode(String.self, forKey:
                 .image)
@@ -86,6 +95,9 @@ class Thing: ObservableObject, Identifiable, Codable {
             .height)
         
         
+        updateImage(imageURL: imageUrl)
+        
+        
         
       }
     
@@ -94,6 +106,13 @@ class Thing: ObservableObject, Identifiable, Codable {
     func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy:CodingKeys.self)
+        
+        
+        try container.encode(imageUrl, forKey: .imageUrl)
+        
+        try container.encode(image,
+                                   forKey: .image)
+        
         
         try container.encode(image,
                              forKey: .image)

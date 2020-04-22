@@ -32,8 +32,8 @@ struct DetailView: View{
                 Spacer()
                     .frame(height: 15)
                 
-                TextField("Image URL", text: self.$url) {
-                    self.model.updateImage(imageURL: self.url)}
+                TextField("Image URL", text: self.$model.imageUrl) {
+                    self.model.updateImage(imageURL: self.model.imageUrl)}
                     .font(.body).multilineTextAlignment(.center)
                 
                 
