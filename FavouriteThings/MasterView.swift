@@ -16,7 +16,7 @@ import SwiftUI
                 if mode?.wrappedValue == .active {
                     HStack {
                         
-                        TextField("Enter Title", text: $viewModel.listTitle).font(Font.system(.largeTitle).bold())
+                        TextField("Enter Navbar Title", text: $viewModel.listTitle).font(Font.system(.largeTitle).bold())
                     }
                 }
                 
