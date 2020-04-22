@@ -12,6 +12,28 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    var viewModel = ViewModel()
+    
+    
+    
+    var character1 = Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo")
+    var character2 = Thing(Name: "Matt" , weight: 200, height: 200, status: "Pls Run", image: "kitty")
+    
+    var character3 = Thing(Name: "Jake" , weight: 200, height: 200, status: "Unknown", image: "dog")
+    
+    
+    private let fileName = "characters.json"
+    
+    private let fileManager = FileManager.default
+    
+    lazy private var documentsDir: URL = {
+               fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+       }()
+       lazy private var fileURL = documentsDir.appendingPathComponent(fileName)
+    
+    
+    
+    
     
     
     
@@ -22,18 +44,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
+        
+        do {
+                 let t = try Data(contentsOf: fileURL)
+                 let decoder = JSONDecoder()
+                 let decodedViewModel = try decoder.decode(ViewModel.self, from: t)
+                 viewModel = decodedViewModel
+             } catch {
+                 print("Could not load \(fileURL.path): \(error)")
+             }
+        
+        
+        
         // Create the SwiftUI view that provides the window contents.
         
-        let contentView = ContentView(viewModel: ViewModel(listTitle: "beans Contacts", people: [
-            
-            
-            ///Creating Characters
-            Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo"),
-            
-            Thing(Name: "Matt" , weight: 200, height: 200, status: "Pls Run", image: "kitty"),
-            
-            Thing(Name: "Jake" , weight: 200, height: 200, status: "Unknown", image: "dog")
-        ]))
+      
+        
+        
+        
+        
+        let contentView = ContentView(viewModel: ViewModel)
+//
+//
+//            ///Creating Characters
+//            Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo"),
+//
+//            Thing(Name: "Matt" , weight: 200, height: 200, status: "Pls Run", image: "kitty"),
+//
+//            Thing(Name: "Jake" , weight: 200, height: 200, status: "Unknown", image: "dog")
+//        ]))
         
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
@@ -70,6 +109,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        do {
+                  let json = JSONEncoder()
+                  let data = try json.encode(viewModel)
+                  try data.write(to: fileURL)
+              } catch {
+                  print("Could not write file \(fileURL.path): \(error)")
+              }
+
     }
     
     

@@ -4,7 +4,7 @@ import Foundation
  This ViewModel model is used to create placeholder text for the Textfields in the DetailView.
  It also contains functins that control the adding and removal of cursed contacts.
  */
-class ViewModel: ObservableObject, Identifiable {
+class ViewModel: ObservableObject, Identifiable, Codable {
     
     ///Creating a listview title.
     static var listTitle: String = "Cursed Contacts"
@@ -35,6 +35,23 @@ class ViewModel: ObservableObject, Identifiable {
     /// This function handles the deletion of a contact from list view.
     func remove(index: Int){
         people.remove(at: index)
+        
+        
+        
+        enum CodingKeys: String, CodingKey {
+            
+            
+            case Name
+            case weight
+            case height
+            case status
+            case image
+            
+            
+            
+        }
+        
+        
         
         
         

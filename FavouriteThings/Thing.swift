@@ -12,30 +12,107 @@ import SwiftUI
  Thing  Class with key properties created used to build cursed characters.
  
  */
-class Thing: ObservableObject, Identifiable {
+class Thing: ObservableObject, Identifiable, Codable {
     ///creating variables and applying type.
     @Published  var Name: String
     /// Integer Weight of Cursed Contact
-    var weight: Int
+   @Published var weight: Int
     /// Integer Height of Cursed Contact
-    var height: Int
+   @Published var height: Int
     /// String status of Cursed Contact
-    var status: String
+   @Published var status: String
     /// String image of  Cursed Contact
     var image: String
     ///Published variable with UIImage conditonal
     @Published var cursedUIImage: UIImage?
     ///Published variable String for cursed notes set to empty.
     @Published var cursednotes: String = ""
+    
+    
+    
+    enum CodingKeys: String, CodingKey {
+        
+        
+        case image
+        case Name
+        case weight
+        case height
+        case status
+        case cursednotes
+        
+        
+        
+    }
+    
+    
+  
+    
     ///initialisation constructor
     init(Name: String,  weight: Int, height: Int, status: String, image:String) {
         self.Name = Name
-        
         self.weight = weight
         self.height = height
         self.status = status
         self.image = image
         
+    }
+    
+    
+    required init (from decoder: Decoder) throws {
+          let container = try decoder.container(keyedBy:CodingKeys.self)
+          
+          image = try
+            container.decode(String.self, forKey:
+                .image)
+        
+        Name = try
+        container.decode(String.self, forKey:
+            .Name)
+        
+        status = try
+        container.decode(String.self, forKey:
+            .status)
+          
+        cursednotes = try
+        container.decode(String.self, forKey:
+            .cursednotes)
+        
+        weight = try
+        container.decode(Int.self, forKey:
+            .weight)
+        
+        height = try
+        container.decode(Int.self, forKey:
+            .height)
+        
+        
+        
+      }
+    
+    
+    
+    func encode(to encoder: Encoder) throws {
+        
+        var container = encoder.container(keyedBy:CodingKeys.self)
+        
+        try container.encode(image,
+                             forKey: .image)
+        
+        try container.encode(Name,
+                             forKey: .Name)
+        
+        try container.encode(status,
+                                    forKey: .status)
+        
+        try container.encode(cursednotes,
+                                           forKey: .cursednotes)
+        
+        
+        try container.encode(weight,
+                                           forKey: .weight)
+        
+        try container.encode(height,
+                                           forKey: .height)
     }
     
     ///This function allows us to update the image of the cursed contact
