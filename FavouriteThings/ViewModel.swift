@@ -45,8 +45,8 @@ class ViewModel: ObservableObject, Identifiable, Codable {
     
     
     ///This function handles the adding of a contact by setting all of variables called in the text fields to empty or 0.
-    func add() {
-        people.insert(Thing(Name: "", weight: 0, height: 0, status: "", image: ""), at: 0)
+    func add(thing: Thing) {
+        people.insert(thing, at: 0)
         
         
     }

@@ -13,7 +13,7 @@ struct ContentView: View {
                     leading: EditButton(),
                     trailing: Button(
                         action: {
-                            withAnimation { self.viewModel.add() }
+                            withAnimation { self.viewModel.add(thing: Thing(Name: "", weight: 0, height: 0, status: "", image: "", cursednotes: "")) }
                         }
                         
                     ) {

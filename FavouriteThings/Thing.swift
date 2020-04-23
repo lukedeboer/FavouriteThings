@@ -50,12 +50,13 @@ class Thing: ObservableObject, Identifiable, Codable {
   
     
     ///initialisation constructor
-    init(Name: String,  weight: Int, height: Int, status: String, image:String) {
+    init(Name: String,  weight: Int, height: Int, status: String, image:String, cursednotes: String) {
         self.Name = Name
         self.weight = weight
         self.height = height
         self.status = status
         self.image = image
+        self.cursednotes = cursednotes
        
         
     }

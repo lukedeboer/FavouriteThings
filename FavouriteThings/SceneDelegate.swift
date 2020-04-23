@@ -15,15 +15,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var viewModel = ViewModel()
     
     
-    
-    var character1 = Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo")
-    var character2 = Thing(Name: "Matt" , weight: 200, height: 200, status: "Pls Run", image: "kitty")
-    
-    var character3 = Thing(Name: "Jake" , weight: 200, height: 200, status: "Unknown", image: "dog")
+    var character1 = Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo", cursednotes: "")
     
     
-    private let fileName = "characters.json"
+     var character2 = Thing(Name: "Timmy" , weight: 230, height: 200, status: "Hide", image: "dog", cursednotes: "")
     
+    
+     var character3 = Thing(Name: "James" , weight: 100, height: 200, status: "Please Run", image: "kitty", cursednotes: "")
+    
+    
+   
+    
+    
+    
+    
+   
+//
+   private let fileName = "characters.json"
+//
     private let fileManager = FileManager.default
     
     lazy private var documentsDir: URL = {
@@ -59,6 +68,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         
       
+        if viewModel.people.count < 1{
+            
+            viewModel.add(thing: character1)
+            viewModel.add(thing: character2)
+            viewModel.add(thing: character3)
+            
+            
+            
+        }
+        
+        
+        
+        
         
         
         
