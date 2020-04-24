@@ -2,7 +2,7 @@
 import Foundation
 /**
  This ViewModel model is used to create placeholder text for the Textfields in the DetailView.
- It also contains functins that control the adding and removal of cursed contacts.
+ It also contains functoins that control the adding and removal of Things.
  */
 class ViewModel: ObservableObject, Identifiable, Codable {
     
@@ -37,7 +37,7 @@ class ViewModel: ObservableObject, Identifiable, Codable {
     static var imageUrlPlaceholder: String = "URL Image"
     /// The fillter text when the user enters the notes for the cursed contact
     static var notesFiller: String = "Enter Notes"
-    ///This is declcaring the array of cursed contacts
+    ///This is declcaring the array of  Things
     @Published var people: [Thing]
     
     

@@ -4,7 +4,7 @@ import SwiftUI
 struct DetailView: View{
     
     /**
-     This view  is what the users will interact with when they click on one of the cursed contacts from the List View
+     This view  is what the users will interact with when they click on one of the Things from the List View
      
      */
     
