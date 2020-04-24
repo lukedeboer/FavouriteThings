@@ -204,7 +204,7 @@ class FavouriteThingsTests: XCTestCase {
         
     }catch{
         
-        XCTFail("JSON DEOCDING FAILED!")
+        XCTFail("JSON DECODING FAILED!")
         
     }
     XCTAssertEqual(viewModel.people.count, 1)

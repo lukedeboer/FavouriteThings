@@ -6,7 +6,6 @@ import SwiftUI
      
      */
     struct MasterView: View {
-        
         @ObservedObject var viewModel: ViewModel
         @Environment(\.editMode) var mode
         
@@ -24,7 +23,7 @@ import SwiftUI
                     ForEach(viewModel.people) { Thing in
                         NavigationLink(destination: DetailView(model: Thing, viewModel: self.viewModel)) {
                             Section {
-                                LineView(model: Thing)
+                                LineView(model: Thing, viewModel: self.viewModel)
                             }
                         }
                     }.onDelete { indices in

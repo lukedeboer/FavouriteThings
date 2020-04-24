@@ -14,7 +14,8 @@ import SwiftUI
 struct LineView: View {
     
     @ObservedObject var model: Thing
-    
+    @ObservedObject var viewModel: ViewModel
+
     
     var body: some View {
         
@@ -32,7 +33,8 @@ struct LineView: View {
             //Threat Status
             Divider()
             
-            Text("Status:")
+           // Text("Status:")
+            Text(viewModel.statusTitle)
             Text(model.status)
             
             
