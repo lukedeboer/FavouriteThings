@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 /**
- Thing  Class with key properties created used to build cursed characters.
+ Thing  Class with key properties created used to build Favourtite Things.
  
  */
 class Thing: ObservableObject, Identifiable, Codable {
@@ -31,7 +31,7 @@ class Thing: ObservableObject, Identifiable, Codable {
     @Published var cursednotes: String = ""
     
     
-    
+    ///Creating cases for codable types
     enum CodingKeys: String, CodingKey {
         
         case imageUrl
@@ -61,7 +61,7 @@ class Thing: ObservableObject, Identifiable, Codable {
         
     }
     
-    
+    ///Decodable protocol Constructor.
     required init (from decoder: Decoder) throws {
           let container = try decoder.container(keyedBy:CodingKeys.self)
           
@@ -103,7 +103,7 @@ class Thing: ObservableObject, Identifiable, Codable {
       }
     
     
-    
+    /// Thing  being encoded using the encode function. 
     func encode(to encoder: Encoder) throws {
         
         var container = encoder.container(keyedBy:CodingKeys.self)

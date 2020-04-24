@@ -31,8 +31,8 @@ class FavouriteThingsTests: XCTestCase {
     
     
     
-//
-//    ///Creating object of ViewModel
+
+  ///Creating object of ViewModel
   var viewModel = ViewModel()
 
     let Name = "Luigi"
@@ -47,14 +47,16 @@ class FavouriteThingsTests: XCTestCase {
     
     
     
-    ///JSON Data setup is copied from Scene delegate.
+     ///find the user's documents directory
+
       private let fileName = "characters.json"
-  private let fileManager = FileManager.default
-  lazy private var documentsDir: URL = {
-          fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-      }()
-   lazy private var fileURL = documentsDir.appendingPathComponent(fileName)
-    
+      private let fileManager = FileManager.default
+        
+      lazy private var documentsDir: URL = {
+              fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+          }()
+       lazy private var fileURL = documentsDir.appendingPathComponent(fileName)
+        
 
     
     
@@ -136,15 +138,15 @@ class FavouriteThingsTests: XCTestCase {
     
     ///Testing Adding and removing Things
     func testAddRemoveViewModel() {
-        
+
           let person1 = Thing(Name: Name, weight: weight, height: height, status: status, image: image, cursednotes: cursednotes)
-        
+
         viewModel.add(thing: person1)
-        
+
         XCTAssertEqual(viewModel.people.count, 1)
-        
-        
-        
+
+
+
     }
     
     

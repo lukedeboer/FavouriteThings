@@ -17,15 +17,14 @@ class ViewModel: ObservableObject, Identifiable, Codable {
     ///Creating Title for Notes
     @Published var notesTitle = "Notes"
     ///Creating Title for Image URL
-    
     @Published var imageUrlTitle = "Image URL"
-    
+    ///Creating Title for Status
     @Published var statusTitle = "Status"
     
     
     
     ///Creating a listview title.
-   @Published var listTitle: String = "Cursed Contacts"
+   @Published var listTitle: String = "Favourite Things"
     /// The filller text when the user enters the name
     static var NameFiller: String = "Enter Name"
     /// The fillter text when the user enters the weight
@@ -62,9 +61,9 @@ class ViewModel: ObservableObject, Identifiable, Codable {
         
         
     }
-    
-    
-           enum CodingKeys: String, CodingKey {
+    ///Creating cases for codable types
+
+               enum CodingKeys: String, CodingKey {
                
                case people
                case listTitle
@@ -87,7 +86,7 @@ class ViewModel: ObservableObject, Identifiable, Codable {
     
     
     
-    
+    ///Constructor for  Decoder
     required init (from decoder: Decoder) throws {
         
         
@@ -123,8 +122,8 @@ class ViewModel: ObservableObject, Identifiable, Codable {
         
         
     }
-    
-    func encode (to encoder: Encoder) throws {
+        /// viewModel  being encoded using the encode function.
+        func encode (to encoder: Encoder) throws {
         
         
         var container = encoder.container(keyedBy: CodingKeys.self)

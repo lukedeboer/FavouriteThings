@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var viewModel = ViewModel()
     
-    
+    ///Demo Character Data
     var character1 = Thing(Name: "Elmur" , weight: 200, height: 200, status: "reeeeeee", image: "elmo", cursednotes: "")
     
     
@@ -30,11 +30,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
    
-//
+  /// Creating Filename
    private let fileName = "characters.json"
-//
+  /// Creating FileManager object and saving to variable
     private let fileManager = FileManager.default
     
+    
+    ///find the user's documents directory
     lazy private var documentsDir: URL = {
                fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
        }()
@@ -52,11 +54,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+       
         
-        
+        ///Decodes the Json file.
         do {
-                 let t = try Data(contentsOf: fileURL)
+              
+                let t = try Data(contentsOf: fileURL)
+            
+                 ///Assigning new Json Decoder Object
                  let decoder = JSONDecoder()
+                 ///Attempt to decode the file data with JSON decoder to make a ViewModel class object
                  let decodedViewModel = try decoder.decode(ViewModel.self, from: t)
                  viewModel = decodedViewModel
              } catch {
@@ -67,7 +74,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Create the SwiftUI view that provides the window contents.
         
-      
+      ///Check if there are any characters in the app yet and if there aren't any then add the 3 Demo Characters.
         if viewModel.people.count < 1{
             
             viewModel.add(thing: character1)
