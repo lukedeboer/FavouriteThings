@@ -13,29 +13,29 @@ import SwiftUI
 
 struct LineView: View {
     
+    @Environment(\.managedObjectContext) var context
     @ObservedObject var model: Thing
-    @ObservedObject var viewModel: ViewModel
 
     
     var body: some View {
         
         HStack {
             /// Characters Image
-            self.model.getImage()
+            self.model.updateImage()
                 .resizable()
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
                 
             
             /// Characters Name
-            Text(model.Name)
+            Text(model.nameStr)
             
             //Threat Status
             Divider()
             
            // Text("Status:")
-            Text(viewModel.statusTitle)
-            Text(model.status)
+            Text(model.statusLabelStr)
+            Text(model.statusStr)
             
             
             

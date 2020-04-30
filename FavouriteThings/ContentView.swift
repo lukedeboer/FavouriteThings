@@ -3,22 +3,30 @@ struct ContentView: View {
     /**
     ContentView is passes the MasterView in to be displayed.
     */
-    @ObservedObject var viewModel: ViewModel
     
-    var body: some View {
-        NavigationView {
-            MasterView(viewModel: viewModel)
-                .navigationBarTitle(Text(viewModel.listTitle), displayMode: .inline)
-                .navigationBarItems(
-                    leading: EditButton(),
-                    trailing: Button(
-                        action: {
-                            withAnimation { self.viewModel.add(thing: Thing(Name: "", weight: 0, height: 0, status: "", image: "", cursednotes: "")) }
-                        }
-                        
-                    ) {
-                    Image(systemName: "plus")
-                    })
+  @Environment(\.managedObjectContext) var context
+        @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Things.listTitle, ascending: true)]) var things: FetchedResults<Things>
+        
+        var body: some View {
+            NavigationView {
+                
+                /// Bringing in MasterView contents
+                MasterView(things: things.first ?? Things(context: context))
+                    .navigationBarItems(
+                      
+                        leading: EditButton(),
+                        trailing: Button(
+                            action: {
+                                withAnimation {
+                                    let thing = Thing(context: self.context)
+                                    thing.thing = self.things.first
+                                    try? self.context.save()
+                                }
+                            }
+                            
+                        ) {
+                        Image(systemName: "plus")
+                        })
+            }
         }
     }
-}
