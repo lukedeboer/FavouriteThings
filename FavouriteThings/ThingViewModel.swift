@@ -46,13 +46,13 @@ extension Thing {
     
     
     
-    
+    /// Declared nameStr variable that gets name value from Coredata and stores it.
     var nameStr: String {
         get { name ?? "" }
         set { name = newValue }
         
     }
-    
+    /// Declared imageNameStr variable that gets imageName value from CoreData and Stores it
     var imageNameStr: String {
         
         get {imageName ?? ""}
@@ -60,21 +60,21 @@ extension Thing {
     
         
     }
-    
+    /// Declared imageURLStr variable that gets the imageURL value from CoreData and Stores it.
     var imageURLStr: String {
         
         get {imageURL ?? ""}
         set {imageURL = newValue}
         
     }
-    
+    /// Declared weightLabelStr  variable that gets the weightLabel value from CoreData and Stores it.
     var weightLabelStr: String {
         
         get { weightLabel ?? "" }
         set { weightLabel = newValue }
         
     }
-    
+    /// Declared weightInt variable that is an Integer type and gets the weight value from CoreData and Stores it.
     var weightInt: Int {
         
         get { Int(weight ?? 0)}
@@ -82,14 +82,14 @@ extension Thing {
         
     }
     
-    
+    /// Declared heightInt variable that is an Integer type and gets the height value from CoreData and Stores it.
     var heightInt: Int {
            
            get { Int(height ?? 0)}
            set {height = Int64(newValue)}
            
        }
-    
+    /// Declared heightLabelStr variable that gets the heightLabel value from CoreData and stores it.
     var heightLabelStr: String {
         get { heightLabel ?? "" }
         set { heightLabel = newValue }
@@ -98,19 +98,21 @@ extension Thing {
         
     }
     
+    /// Declared statusStr variable that gets the status value from CoreData and stores it.
     var statusStr: String {
         get { status ?? "" }
         set { status = newValue }
         
     }
     
+    /// Declared statusLabelStr variable that gets the statusLabel value from CoreData and stores it.
     var statusLabelStr: String {
         
         
         get { statusLabel ?? "" }
         set { statusLabel = newValue }
     }
-    
+    /// Declared notesLabelStr variable that gets the notesLabel value from CoreData and Stores it.
     var notesLabelStr: String {
         
         
@@ -118,14 +120,14 @@ extension Thing {
         set { notesLabel = newValue }
     }
     
-    
+    //// Declared notesStr variable that gets the notes value from CoreData and Stores it.
     var notesStr: String {
         
         get { notes ?? ""}
               set { notes = newValue }
         
     }
-    
+    ///UpdateImage function declared that updates the image and also returns the image.
     func updateImage() -> Image {
         guard let imageURL = imageURL,
             let url = URL(string: imageURL),
