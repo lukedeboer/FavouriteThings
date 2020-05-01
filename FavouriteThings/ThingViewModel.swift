@@ -42,8 +42,7 @@ extension Thing {
      static var imageUrlPlaceholder: String = "URL Image"
      /// The fillter text when the user enters the notes for the cursed contact
      static var notesFiller: String = "Enter Notes"
-    
-    //hello
+
     
     
     
