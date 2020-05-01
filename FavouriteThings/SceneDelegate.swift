@@ -51,7 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     things.addToThings(thing)
                     
                     thing = Thing(context: context)
-                    thing.name = "Elmur"
+                    thing.name = "Benny"
                     thing.imageURL = "https://i.picsum.photos/id/813/200/200.jpg"
                     thing.weight = 100
                     thing.height = 200
@@ -60,7 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     things.addToThings(thing)
                     
                   thing = Thing(context: context)
-                    thing.name = "Elmur"
+                    thing.name = "Timmy"
                     thing.imageURL = "https://i.picsum.photos/id/813/200/200.jpg"
                     thing.weight = 100
                     thing.height = 200
