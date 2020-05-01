@@ -12,7 +12,7 @@ import CoreData
 
 
 extension Thing {
-
+ /// fetch request of Thing with entityName Thing
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Thing> {
         return NSFetchRequest<Thing>(entityName: "Thing")
     }

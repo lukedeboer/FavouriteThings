@@ -3,12 +3,14 @@ import SwiftUI
     
     /**
      This  is the initial view users will see when they open the app. .
-     
+      We pass through the LineView
      */
     struct MasterView: View {
+        ///Getting the context
         @Environment(\.managedObjectContext) var context
+        ///Calling Things and storing it in a variable thing
         @ObservedObject var things: Things
-        
+        ///Getting the edit mode
          @Environment(\.editMode) var mode
 
 
@@ -29,12 +31,15 @@ import SwiftUI
                             LineView(model: thing)
                             }
                         }
+                        ///Deleting a Thing from list
                     }.onDelete { indices in
                         indices.forEach { self.things.removeFromThings(at: $0) }
+                        ///Moving thing in list
                     }.onMove { (indices, destination) in
                    self.things.entries.move(fromOffsets: indices, toOffset: destination)
                     }
                 }
+                ///Here is our navbar  title
             }.navigationBarTitle(mode?.wrappedValue == .active
                 ? "": things.listTitle ?? "")
         }

@@ -16,8 +16,9 @@ extension Things {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Things> {
         return NSFetchRequest<Things>(entityName: "Things")
     }
-
+    ///Title for the list view being declared as a string variable.
     @NSManaged public var listTitle: String?
+    ///Things variable declared for the entity which has the NSOrderedSet that declares programmatic interface for static sets
     @NSManaged public var things: NSOrderedSet?
 
 }

@@ -7,8 +7,9 @@ struct DetailView: View{
      This view  is what the users will interact with when they click on one of the Things from the List View
 
      */
-
+    ///Getting the context
     @Environment(\.managedObjectContext) var context
+    ///Calling Thing and storing it in a variable called "model"
     @ObservedObject var model: Thing
 
     var body: some View {
@@ -79,12 +80,12 @@ struct DetailView: View{
 
 
                     VStack (alignment: .leading, spacing: 10){
-
+                        ///Weight of thing
                         TextField("Enter Weight", value: self.$model.weightInt, formatter: NumberFormatter())
                             .font(.body).multilineTextAlignment(.center)
                             .frame(width:50, height:20)
 
-
+                        ///Height of Thing
                         TextField("Enter Height", value: self.$model.heightInt, formatter: NumberFormatter())
                             .font(.body).multilineTextAlignment(.center)
                             .frame(width:50, height:20)
@@ -96,25 +97,25 @@ struct DetailView: View{
                 VStack{
 
 
-
+                    ///Status Label
                     Spacer()
                         .frame(height:30)
                     TextField("Enter Label", text: self.$model.statusLabelStr)
                      .frame(width:50, height:20)
 
 
-
+                    ///Status
                     TextField("Enter Status", text: self.$model.statusStr)
                         .font(Font.system(size:18))
                         .font(.body).multilineTextAlignment(.center)
 
-
-
+                     
+                    ///Notes Label
                     TextField("Enter Label", text: self.$model.notesLabelStr)
                         .padding(.top,20)
                         .font(.title)
                     .frame(width:80, height:20)
-
+                    ///Notes
                     TextField("Enter Notes", text: self.$model.notesStr)
                         .font(.body).multilineTextAlignment(.center)
                         .padding(.top,15)
