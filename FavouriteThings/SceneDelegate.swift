@@ -44,8 +44,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     var thing = Thing(context: context)
                     thing.name = "Elmur"
                     thing.imageURL = "https://i.picsum.photos/id/813/200/200.jpg"
-                    thing.weight = 100
-                    thing.height = 200
+                    thing.weight = "12"
+                    thing.height = "22"
                     thing.status = "Deadly"
                     thing.notes = "Please Stay Away!"
                     things.addToThings(thing)
@@ -53,8 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     thing = Thing(context: context)
                     thing.name = "Benny"
                     thing.imageURL = "https://i.picsum.photos/id/813/200/200.jpg"
-                    thing.weight = 100
-                    thing.height = 200
+                    thing.weight = "223"
+                    thing.height = "122"
                     thing.status = "Deadly"
                     thing.notes = "Please Stay Away!"
                     things.addToThings(thing)
@@ -62,8 +62,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                   thing = Thing(context: context)
                     thing.name = "Timmy"
                     thing.imageURL = "https://i.picsum.photos/id/813/200/200.jpg"
-                    thing.weight = 100
-                    thing.height = 200
+                    thing.weight = "200"
+                    thing.height = "300"
                     thing.status = "Deadly"
                     thing.notes = "Please Stay Away!"
                     things.addToThings(thing)

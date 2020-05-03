@@ -75,18 +75,20 @@ extension Thing {
         
     }
     /// Declared weightInt variable that is an Integer type and gets the weight value from CoreData and Stores it.
-    var weightInt: Int {
+    var weightStr: String {
         
-        get { Int(weight ?? 0)}
-        set {weight = Int64(newValue)}
+        get { weight ?? ""}
+        ///Make this is a string
+        set {weight = newValue}
         
     }
     
     /// Declared heightInt variable that is an Integer type and gets the height value from CoreData and Stores it.
-    var heightInt: Int {
+    var heightStr: String {
            
-           get { Int(height ?? 0)}
-           set {height = Int64(newValue)}
+           get { height ?? ""}
+           ///Make this a string
+           set {height = newValue}
            
        }
     /// Declared heightLabelStr variable that gets the heightLabel value from CoreData and stores it.

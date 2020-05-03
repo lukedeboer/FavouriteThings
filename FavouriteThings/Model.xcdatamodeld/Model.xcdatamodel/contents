@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Thing" representedClassName="Thing" syncable="YES" codeGenerationType="class">
-        <attribute name="height" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="height" attributeType="String" defaultValueString=""/>
         <attribute name="heightLabel" attributeType="String" defaultValueString="Height:"/>
         <attribute name="imageLabel" attributeType="String" defaultValueString="Image:"/>
         <attribute name="imageName" attributeType="String" defaultValueString=""/>
@@ -11,7 +11,7 @@
         <attribute name="notesLabel" attributeType="String" defaultValueString="Notes:"/>
         <attribute name="status" attributeType="String" defaultValueString=""/>
         <attribute name="statusLabel" attributeType="String" defaultValueString="Status:"/>
-        <attribute name="weight" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weight" attributeType="String" defaultValueString=""/>
         <attribute name="weightLabel" attributeType="String" defaultValueString="Weight:"/>
         <relationship name="thing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Things" inverseName="things" inverseEntity="Things"/>
     </entity>

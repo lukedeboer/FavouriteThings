@@ -81,12 +81,12 @@ struct DetailView: View{
 
                     VStack (alignment: .leading, spacing: 10){
                         ///Weight of thing
-                        TextField("Enter Weight", value: self.$model.weightInt, formatter: NumberFormatter())
+                        TextField("Enter Weight", text: self.$model.weightStr)
                             .font(.body).multilineTextAlignment(.center)
                             .frame(width:50, height:20)
 
                         ///Height of Thing
-                        TextField("Enter Height", value: self.$model.heightInt, formatter: NumberFormatter())
+                        TextField("Enter Height", text: self.$model.heightStr)
                             .font(.body).multilineTextAlignment(.center)
                             .frame(width:50, height:20)
 

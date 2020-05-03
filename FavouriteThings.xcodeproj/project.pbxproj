@@ -42,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D29822E245E42030008B411 /* Thing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Thing+CoreDataClass.swift"; path = "FavouriteThings/Thing+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8D29822F245E42030008B411 /* Thing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Thing+CoreDataProperties.swift"; path = "FavouriteThings/Thing+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8D298230245E42030008B411 /* Things+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataClass.swift"; path = "FavouriteThings/Things+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8D298231245E42030008B411 /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataProperties.swift"; path = "FavouriteThings/Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D5D59D5245AF51D0067D041 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewModel.swift; sourceTree = "<group>"; };
 		8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingViewModel.swift; sourceTree = "<group>"; };
@@ -63,10 +67,6 @@
 		8D65C250244FED1C00059B74 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		8D65C252244FED2B00059B74 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		8D65C25C24508E6400059B74 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
-		8D7D7CAE245B1A5B00B6BC38 /* Thing+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Thing+CoreDataClass.swift"; path = "FavouriteThings/Thing+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8D7D7CAF245B1A5B00B6BC38 /* Thing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Thing+CoreDataProperties.swift"; path = "FavouriteThings/Thing+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8D7D7CB0245B1A5B00B6BC38 /* Things+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataClass.swift"; path = "FavouriteThings/Things+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8D7D7CB1245B1A5B00B6BC38 /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataProperties.swift"; path = "FavouriteThings/Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +106,10 @@
 		8D65C214244FE7C900059B74 = {
 			isa = PBXGroup;
 			children = (
-				8D7D7CAE245B1A5B00B6BC38 /* Thing+CoreDataClass.swift */,
-				8D7D7CAF245B1A5B00B6BC38 /* Thing+CoreDataProperties.swift */,
-				8D7D7CB0245B1A5B00B6BC38 /* Things+CoreDataClass.swift */,
-				8D7D7CB1245B1A5B00B6BC38 /* Things+CoreDataProperties.swift */,
+				8D29822E245E42030008B411 /* Thing+CoreDataClass.swift */,
+				8D29822F245E42030008B411 /* Thing+CoreDataProperties.swift */,
+				8D298230245E42030008B411 /* Things+CoreDataClass.swift */,
+				8D298231245E42030008B411 /* Things+CoreDataProperties.swift */,
 				8D65C21F244FE7C900059B74 /* FavouriteThings */,
 				8D65C236244FE7CC00059B74 /* FavouriteThingsTests */,
 				8D65C241244FE7CC00059B74 /* FavouriteThingsUITests */,
