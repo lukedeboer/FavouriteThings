@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8D29823724638CF10008B411 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D29823624638CF10008B411 /* MapKit.framework */; };
 		8D29823924638D010008B411 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D29823824638D010008B411 /* CoreLocation.framework */; };
+		8D29823B24638D600008B411 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29823A24638D600008B411 /* PlaceViewModel.swift */; };
+		8D29823D246398CF0008B411 /* AppleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29823C246398CF0008B411 /* AppleMapView.swift */; };
+		8D29823F246398E10008B411 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29823E246398E10008B411 /* LocationView.swift */; };
+		8D2982412463DF210008B411 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2982402463DF210008B411 /* KeyboardModifier.swift */; };
 		8D5D59D6245AF51D0067D041 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5D59D5245AF51D0067D041 /* CoreData.framework */; };
 		8D5D59D8245AFDDE0067D041 /* ThingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */; };
 		8D5D59DA245AFDF30067D041 /* ThingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */; };
@@ -50,6 +54,10 @@
 		8D298231245E42030008B411 /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataProperties.swift"; path = "FavouriteThings/Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D29823624638CF10008B411 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8D29823824638D010008B411 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8D29823A24638D600008B411 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		8D29823C246398CF0008B411 /* AppleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapView.swift; sourceTree = "<group>"; };
+		8D29823E246398E10008B411 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		8D2982402463DF210008B411 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		8D5D59D5245AF51D0067D041 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewModel.swift; sourceTree = "<group>"; };
 		8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */,
+				8D29823A24638D600008B411 /* PlaceViewModel.swift */,
 				8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */,
 				8D65C220244FE7C900059B74 /* AppDelegate.swift */,
 				8D65C222244FE7C900059B74 /* SceneDelegate.swift */,
@@ -151,7 +160,10 @@
 				8D65C226244FE7CB00059B74 /* Assets.xcassets */,
 				8D65C22B244FE7CB00059B74 /* LaunchScreen.storyboard */,
 				8D65C22E244FE7CB00059B74 /* Info.plist */,
+				8D29823C246398CF0008B411 /* AppleMapView.swift */,
+				8D29823E246398E10008B411 /* LocationView.swift */,
 				8D65C228244FE7CB00059B74 /* Preview Content */,
+				8D2982402463DF210008B411 /* KeyboardModifier.swift */,
 			);
 			path = FavouriteThings;
 			sourceTree = "<group>";
@@ -314,11 +326,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D65C221244FE7C900059B74 /* AppDelegate.swift in Sources */,
+				8D29823F246398E10008B411 /* LocationView.swift in Sources */,
 				8D65C223244FE7C900059B74 /* SceneDelegate.swift in Sources */,
+				8D2982412463DF210008B411 /* KeyboardModifier.swift in Sources */,
 				8D65C251244FED1C00059B74 /* MasterView.swift in Sources */,
 				8D65C253244FED2B00059B74 /* DetailView.swift in Sources */,
 				8D5D59D8245AFDDE0067D041 /* ThingsViewModel.swift in Sources */,
 				8D65C25D24508E6400059B74 /* LineView.swift in Sources */,
+				8D29823D246398CF0008B411 /* AppleMapView.swift in Sources */,
+				8D29823B24638D600008B411 /* PlaceViewModel.swift in Sources */,
 				8D65C225244FE7C900059B74 /* ContentView.swift in Sources */,
 				8D5D59DD245B00EF0067D041 /* Model.xcdatamodeld in Sources */,
 				8D5D59DA245AFDF30067D041 /* ThingViewModel.swift in Sources */,

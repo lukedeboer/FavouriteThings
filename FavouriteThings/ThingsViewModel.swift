@@ -21,4 +21,16 @@ extension Things {
         set(newTitle) { self.listTitle = newTitle }
         get { listTitle ?? "" }
     }
+    
+    
+    
+    
+    
+    func sortAlphabetically() {
+        entries.sort()
+    }
+    
+    func sortInReverseOrder() {
+        entries.sort(by: (>))
+    }
 }

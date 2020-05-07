@@ -137,7 +137,15 @@ extension Thing {
             let uiImage = UIImage(data: imageData) else {
                 return Image(imageName ?? "cursed")
             }
+     
+        
+        
         return Image(uiImage: uiImage)
     }
-    
 }
+    extension Thing: Comparable {
+    public static func < (lhs: Thing, rhs: Thing) -> Bool {
+        lhs.nameStr < rhs.nameStr
+    }
+    }
+

@@ -11,7 +11,7 @@ struct DetailView: View{
     @Environment(\.managedObjectContext) var context
     ///Calling Thing and storing it in a variable called "model"
     @ObservedObject var model: Thing
-
+ @State var keyboardYOffset: CGFloat = 0
     var body: some View {
 
         GeometryReader { geometry in
@@ -119,6 +119,11 @@ struct DetailView: View{
                     TextField("Enter Notes", text: self.$model.notesStr)
                         .font(.body).multilineTextAlignment(.center)
                         .padding(.top,15)
+                   
+                    NavigationLink( destination: LocationView()) {
+                                         
+                                          Text("Location of Character")
+                                      }
 
 
 
@@ -127,7 +132,7 @@ struct DetailView: View{
 
 
             }
-        }
+        }.onKeyboard($keyboardYOffset)
 
     }}
 

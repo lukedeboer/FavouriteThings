@@ -24,6 +24,23 @@ import SwiftUI
                     }
                 }
                 
+                
+                HStack {
+                              Spacer()
+                              Button("Sort A-Z") {
+                                  self.things.sortAlphabetically()
+                              }.foregroundColor(.black)
+                              
+                               Spacer()
+                              Button("Sort Z-A") {
+                                  self.things.sortInReverseOrder()
+                              }.foregroundColor(.black)
+                              
+                              Spacer()
+                    
+                          }
+                
+                
                 List {
                     ForEach(things.entries, id: \.self) { thing in
                     NavigationLink(destination: DetailView(model: thing)) {
