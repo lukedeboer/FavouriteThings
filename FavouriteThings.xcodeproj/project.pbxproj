@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D29823724638CF10008B411 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D29823624638CF10008B411 /* MapKit.framework */; };
+		8D29823924638D010008B411 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D29823824638D010008B411 /* CoreLocation.framework */; };
 		8D5D59D6245AF51D0067D041 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5D59D5245AF51D0067D041 /* CoreData.framework */; };
 		8D5D59D8245AFDDE0067D041 /* ThingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */; };
 		8D5D59DA245AFDF30067D041 /* ThingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */; };
@@ -46,6 +48,8 @@
 		8D29822F245E42030008B411 /* Thing+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Thing+CoreDataProperties.swift"; path = "FavouriteThings/Thing+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D298230245E42030008B411 /* Things+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataClass.swift"; path = "FavouriteThings/Things+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8D298231245E42030008B411 /* Things+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Things+CoreDataProperties.swift"; path = "FavouriteThings/Things+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8D29823624638CF10008B411 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8D29823824638D010008B411 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8D5D59D5245AF51D0067D041 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D5D59D7245AFDDE0067D041 /* ThingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewModel.swift; sourceTree = "<group>"; };
 		8D5D59D9245AFDF30067D041 /* ThingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingViewModel.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D29823924638D010008B411 /* CoreLocation.framework in Frameworks */,
+				8D29823724638CF10008B411 /* MapKit.framework in Frameworks */,
 				8D5D59D6245AF51D0067D041 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,8 @@
 		8D5D59D4245AF51D0067D041 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D29823824638D010008B411 /* CoreLocation.framework */,
+				8D29823624638CF10008B411 /* MapKit.framework */,
 				8D5D59D5245AF51D0067D041 /* CoreData.framework */,
 			);
 			name = Frameworks;
