@@ -101,7 +101,8 @@ struct DetailView: View{
                     Spacer()
                         .frame(height:30)
                     TextField("Enter Label", text: self.$model.statusLabelStr)
-                     .frame(width:50, height:20)
+                        .font(.body).multilineTextAlignment(.center)
+                     .frame(width:70, height:20)
 
 
                     ///Status
